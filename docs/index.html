@@ -1,78 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trustlab Blood Collection Centre | Karwar</title>
-  <meta name="description" content="Trustlab Blood Collection Centre, Karwar. Home sample collection, accurate reports, WhatsApp reporting." />
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f7f9fc; color: #333; }
-    header { background: #0b5ed7; color: #fff; padding: 20px; text-align: center; }
-    header img { max-width: 140px; margin-bottom: 10px; }
-    section { padding: 30px 20px; max-width: 1000px; margin: auto; }
-    h2 { color: #0b5ed7; margin-bottom: 10px; }
-    .services ul { columns: 2; list-style: square; }
-    .services li { margin: 6px 0; }
-    .card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px; }
-    .btn { display: inline-block; background: #25D366; color: #fff; padding: 12px 20px; text-decoration: none; border-radius: 6px; margin-top: 10px; }
-    footer { background: #0b5ed7; color: #fff; text-align: center; padding: 15px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trustlab Blood Collection Centre</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 10px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h1, h2, h3 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.tests-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.tests-table th, .tests-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.tests-table th {
+  background-color: #f2f2f2;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.collapsible {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.active, .collapsible:hover {
+  background-color: #45a049;
+}
+
+.content {
+  padding: 0 0px;
+  display: none;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+    header img { max-width: 150px; }
+    .collapsible { font-size: 16px; padding: 10px; }
+    .tests-table th, .tests-table td { padding: 6px; }
+}
+
+@media screen and (max-width: 480px) {
+    body { padding: 0 5px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+}
+</style>
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="Trustlab Logo" />
-  <h1>Trustlab Blood Collection Centre</h1>
-  <p>Accurate • Affordable • Trusted</p>
+    <img src="logo.png" alt="Trustlab Logo" style="max-width:180px;">
+    <h1>Trustlab Blood Collection Centre</h1>
+    <p>Accurate • Affordable • Trusted Diagnostics</p>
 </header>
 
-<section class="card">
-  <h2>About Us</h2>
-  <p>Trustlab Blood Collection Centre in Karwar provides reliable diagnostic services with a focus on accuracy, hygiene, and patient comfort. We also offer home sample collection for your convenience.</p>
+<section id="about">
+    <h2>About Us</h2>
+    <p>Trustlab Blood Collection Centre in Karwar provides reliable diagnostic services with a focus on accuracy, hygiene, and patient comfort. We also offer home sample collection for your convenience. Affordable packages are available for individuals and families.</p>
 </section>
 
-<section class="card services">
-  <h2>Tests Available</h2>
-  <ul>
-    <li>Complete Blood Count (CBC)</li>
-    <li>Blood Sugar (FBS / PPBS / RBS)</li>
-    <li>Thyroid Profile</li>
-    <li>Liver Function Test (LFT)</li>
-    <li>Kidney Function Test (KFT)</li>
-    <li>Lipid Profile</li>
-    <li>Urine Routine</li>
-    <li>Vitamin D & B12</li>
-    <li>HbA1c</li>
-    <li>CRP, ESR</li>
-  </ul>
-  <p><strong>Affordable packages available.</strong></p>
-  <a class="btn" href="https://wa.me/919611540325">Call / WhatsApp for Prices</a>
+<section id="tests">
+    <h2>Tests Available</h2>
+
+    <!-- Blood Tests -->
+    <button type="button" class="collapsible">🩸 Blood Tests (100+)</button>
+    <div class="content">
+      <div class="table-container">
+        <table class="tests-table">
+          <tr><th>Test Name</th><th>Profile</th></tr>
+          <tr><td>Complete Blood Count (CBC)</td><td>Hematology</td></tr>
+          <tr><td>Hemoglobin</td><td>Hematology</td></tr>
+          <tr><td>RBC Count</td><td>Hematology</td></tr>
+          <tr><td>WBC Count</td><td>Hematology</td></tr>
+          <tr><td>Platelet Count</td><td>Hematology</td></tr>
+          <tr><td>ESR</td><td>Hematology</td></tr>
+          <tr><td>Blood Sugar FBS</td><td>Biochemistry</td></tr>
+          <tr><td>Blood Sugar PPBS</td><td>Biochemistry</td></tr>
+          <tr><td>Random Blood Sugar (RBS)</td><td>Biochemistry</td></tr>
+          <tr><td>HbA1c</td><td>Biochemistry</td></tr>
+          <tr><td>Urea</td><td>Kidney Function</td></tr>
+          <tr><td>Creatinine</td><td>Kidney Function</td></tr>
+          <tr><td>Uric Acid</td><td>Kidney Function</td></tr>
+          <tr><td>Serum Electrolytes: Na, K, Cl</td><td>Kidney Function</td></tr>
+          <tr><td>SGOT (AST)</td><td>Liver Function</td></tr>
+          <tr><td>SGPT (ALT)</td><td>Liver Function</td></tr>
+          <tr><td>ALP</td><td>Liver Function</td></tr>
+          <tr><td>Total Bilirubin</td><td>Liver Function</td></tr>
+          <tr><td>Direct Bilirubin</td><td>Liver Function</td></tr>
+          <tr><td>Total Protein</td><td>Liver Function</td></tr>
+          <tr><td>Albumin</td><td>Liver Function</td></tr>
+          <tr><td>Globulin</td><td>Liver Function</td></tr>
+          <tr><td>Cholesterol Total</td><td>Lipid Profile</td></tr>
+          <tr><td>HDL Cholesterol</td><td>Lipid Profile</td></tr>
+          <tr><td>LDL Cholesterol</td><td>Lipid Profile</td></tr>
+          <tr><td>VLDL Cholesterol</td><td>Lipid Profile</td></tr>
+          <tr><td>Triglycerides</td><td>Lipid Profile</td></tr>
+          <tr><td>Cardiac Risk Ratio</td><td>Lipid Profile</td></tr>
+          <!-- Add remaining blood tests similarly -->
+        </table>
+      </div>
+    </div>
+
+    <!-- Cardiac Tests -->
+    <button type="button" class="collapsible">🫀 Cardiac Tests</button>
+    <div class="content">
+      <div class="table-container">
+        <table class="tests-table">
+          <tr><th>Test Name</th><th>Profile</th></tr>
+          <tr><td>Troponin I / T</td><td>Cardiac Marker</td></tr>
+          <tr><td>CK-MB</td><td>Cardiac Marker</td></tr>
+          <tr><td>Myoglobin</td><td>Cardiac Marker</td></tr>
+          <tr><td>BNP / NT-proBNP</td><td>Cardiac Marker</td></tr>
+          <tr><td>LDH</td><td>Cardiac / Biochemistry</td></tr>
+          <tr><td>Homocysteine</td><td>Cardiac Risk Marker</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Special Tests -->
+    <button type="button" class="collapsible">🧬 Special Tests</button>
+    <div class="content">
+      <div class="table-container">
+        <table class="tests-table">
+          <tr><th>Test Name</th><th>Profile</th></tr>
+          <tr><td>Vitamin D 25 OH</td><td>Vitamin / Mineral</td></tr>
+          <tr><td>Vitamin B12</td><td>Vitamin / Mineral</td></tr>
+          <tr><td>Folic Acid</td><td>Vitamin / Mineral</td></tr>
+          <tr><td>Iron / Ferritin</td><td>Vitamin / Mineral</td></tr>
+          <tr><td>Procalcitonin</td><td>Infectious Marker</td></tr>
+          <tr><td>CRP (C-Reactive Protein)</td><td>Inflammatory Marker</td></tr>
+          <tr><td>Rheumatoid Factor (RF)</td><td>Immunology</td></tr>
+          <tr><td>Anti CCP</td><td>Immunology</td></tr>
+          <tr><td>ANA</td><td>Immunology</td></tr>
+          <tr><td>Anti dsDNA</td><td>Immunology</td></tr>
+          <tr><td>Complement C3, C4</td><td>Immunology</td></tr>
+          <tr><td>PSA (Prostate)</td><td>Oncology</td></tr>
+          <tr><td>CA-125</td><td>Oncology</td></tr>
+          <tr><td>CA 19-9</td><td>Oncology</td></tr>
+          <tr><td>CEA</td><td>Oncology</td></tr>
+          <tr><td>AFP</td><td>Oncology</td></tr>
+          <tr><td>PCR Tests (COVID-19, Hep B, Hep C)</td><td>Molecular / Special</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Urine Tests -->
+    <button type="button" class="collapsible">🧪 Urine Tests</button>
+    <div class="content">
+      <div class="table-container">
+        <table class="tests-table">
+          <tr><th>Test Name</th><th>Profile</th></tr>
+          <tr><td>Urine Routine & Microscopy</td><td>Urine</td></tr>
+          <tr><td>Urine Culture & Sensitivity</td><td>Urine / Microbiology</td></tr>
+          <tr><td>Urine Sugar</td><td>Urine</td></tr>
+          <tr><td>Urine Protein</td><td>Urine</td></tr>
+          <tr><td>Urine Ketone</td><td>Urine</td></tr>
+          <tr><td>Urine pH</td><td>Urine</td></tr>
+          <tr><td>Urine Pregnancy Test</td><td>Urine / Hormone</td></tr>
+          <tr><td>24-hour Urine Protein / Electrolytes</td><td>Urine / Kidney Function</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Sputum Tests -->
+    <button type="button" class="collapsible">🫁 Sputum Tests</button>
+    <div class="content">
+      <div class="table-container">
+        <table class="tests-table">
+          <tr><th>Test Name</th><th>Profile</th></tr>
+          <tr><td>Sputum Routine Examination</td><td>Sputum</td></tr>
+          <tr><td>Sputum Culture & Sensitivity</td><td>Microbiology</td></tr>
+          <tr><td>Sputum for AFB (Tuberculosis)</td><td>Microbiology</td></tr>
+          <tr><td>Sputum Microscopy / Gram Stain</td><td>Microbiology</td></tr>
+          <tr><td>Sputum Cytology</td><td>Special</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Stool Tests -->
+    <button type="button" class="collapsible">💩 Stool Tests</button>
+    <div class="content">
+      <div class="table-container">
+        <table class="tests-table">
+          <tr><th>Test Name</th><th>Profile</th></tr>
+          <tr><td>Stool Routine Examination</td><td>Stool</td></tr>
+          <tr><td>Stool Occult Blood</td><td>Stool</td></tr>
+          <tr><td>Stool Reducing Substances</td><td>Stool</td></tr>
+          <tr><td>Stool Culture & Sensitivity</td><td>Microbiology</td></tr>
+          <tr><td>Stool Ova & Cyst (Parasite)</td><td>Microbiology</td></tr>
+          <tr><td>Stool Fat / Malabsorption Test</td><td>Special</td></tr>
+        </table>
+      </div>
+    </div>
+
 </section>
 
-<section class="card">
-  <h2>Our Services</h2>
-  <ul>
-    <li>Home Sample Collection</li>
-    <li>Accurate & Timely Reports</li>
-    <li>WhatsApp Report Delivery</li>
-    <li>Special Offers Every Month</li>
-  </ul>
+<section id="services">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Home Sample Collection</li>
+        <li>Accurate & Timely Reports</li>
+        <li>WhatsApp Report Delivery</li>
+        <li>Special Offers Every Month</li>
+    </ul>
 </section>
 
-<section class="card">
-  <h2>Working Hours</h2>
-  <p>🕒 7:00 AM – 9:00 PM</p>
+<section id="hours">
+    <h2>Working Hours</h2>
+    <p>7:00 AM – 9:00 PM</p>
 </section>
 
-<section class="card">
-  <h2>Contact Us</h2>
-  <p>📞 Phone / WhatsApp: <strong>9611540325</strong></p>
-  <p>📍 Location: <a href="https://maps.app.goo.gl/7BnvoPSVS3RN2FUZ8" target="_blank">View on Google Maps</a></p>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone / WhatsApp: 9611540325</p>
+    <p>Location: Karwar, Karnataka (View on Google Maps)</p>
 </section>
 
 <footer>
-  <p>© 2026 Trustlab Blood Collection Centre, Karwar</p>
+    <p>© 2026 Trustlab Blood Collection Centre, Karwar</p>
 </footer>
+
+<script>
+// Collapsible JS
+const coll = document.getElementsByClassName("collapsible");
+for (let i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    const content = this.nextElementSibling;
+    content.style.display = (content.style.display === "block") ? "none" : "block";
+  });
+}
+</script>
 
 </body>
 </html>
+
