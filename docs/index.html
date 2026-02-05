@@ -16,58 +16,17 @@ body {
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 10px;
-    background-color: #4CAF50;
-    color: white;
-    flex-wrap: wrap;
+    text-align: center;
+    padding: 20px 0;
 }
 
 header img {
-    max-width: 150px;
+    max-width: 180px;
     height: auto;
+    margin-bottom: 10px;
 }
 
-header .header-text {
-    flex: 1;
-    text-align: center;
-    margin: 0 10px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 22px;
-}
-
-header p {
-    margin: 5px 0 0;
-    font-size: 14px;
-}
-
-.contact-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.contact-buttons a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-    border: 1px solid white;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.contact-buttons a:hover {
-    background-color: white;
-    color: #4CAF50;
-}
-
-h2, h3 {
+h1, h2, h3 {
     color: #4CAF50;
     margin-bottom: 10px;
 }
@@ -130,22 +89,35 @@ ul {
     padding-left: 20px;
 }
 
+.contact-link {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-link:hover {
+    background-color: #45a049;
+}
+
 footer {
     text-align: center;
     margin: 20px 0;
-    font-size: 14px;
 }
 
 @media screen and (max-width: 768px) {
-    header img { max-width: 120px; }
-    header h1 { font-size: 18px; }
+    header img { max-width: 150px; }
     .collapsible { font-size: 16px; padding: 10px; }
     .tests-table th, .tests-table td { padding: 6px; }
-    .contact-buttons { flex-direction: row; justify-content: center; flex-wrap: wrap; gap: 5px; }
 }
 
 @media screen and (max-width: 480px) {
     body { padding: 0 5px; }
+    h1 { font-size: 22px; }
     h2 { font-size: 20px; }
     h3 { font-size: 18px; }
 }
@@ -155,14 +127,9 @@ footer {
 
 <header>
     <img src="logo.png" alt="Trustlab Logo">
-    <div class="header-text">
-        <h1>Trustlab Blood Collection Centre</h1>
-        <p>Accurate • Affordable • Trusted Diagnostics</p>
-    </div>
-    <div class="contact-buttons">
-        <a href="https://wa.me/91611540325" target="_blank">WhatsApp Us</a>
-        <a href="https://www.google.com/maps/place/Karwar,+Karnataka" target="_blank">View Location</a>
-    </div>
+    <h1>Trustlab Blood Collection Centre</h1>
+    <p style="font-style: italic; font-weight: bold; margin: 5px 0;">Your health is our priority</p>
+    <p>Accurate • Affordable • Trusted Diagnostics</p>
 </header>
 
 <section id="about">
@@ -211,9 +178,31 @@ footer {
       </div>
     </div>
 
-<!-- Cardiac, Special, Urine, Sputum, Stool sections remain same -->
-<!-- Add them here similar to Blood Tests -->
+    <!-- WhatsApp link after tests -->
+    <a href="https://wa.me/91611540325" target="_blank" class="contact-link">📱 Contact Us on WhatsApp</a>
 
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Home Sample Collection</li>
+        <li>Accurate & Timely Reports</li>
+        <li>WhatsApp Report Delivery</li>
+        <li>Special Offers Every Month</li>
+    </ul>
+</section>
+
+<section id="hours">
+    <h2>Working Hours</h2>
+    <p>7:00 AM – 9:00 PM</p>
+</section>
+
+<section id="contact">
+    <h2>Contact & Location</h2>
+    <p>Phone / WhatsApp: 9611540325</p>
+    <!-- Location link at the very end -->
+    <a href="https://www.google.com/maps/place/Karwar,+Karnataka" target="_blank" class="contact-link">📍 View Location on Google Maps</a>
 </section>
 
 <footer>
